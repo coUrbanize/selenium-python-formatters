@@ -297,6 +297,7 @@ this.options = {
           'from selenium.webdriver.common.keys import Keys\n' +
           'from selenium.webdriver.support.ui import Select\n' +
           'from selenium.common.exceptions import NoSuchElementException\n' +
+          'from selenium.webdriver.common.action_chains import ActionChains\n' +
           'import unittest, time, re\n' +
           '\n' +
           'class ${className}(unittest.TestCase):\n' +
@@ -370,7 +371,7 @@ this.configForm =
         '</menupopup></menulist>' +
         '<checkbox id="options_showSelenese" label="Show Selenese"/>';
 
-this.name = "Python (WebDriver)";
+this.name = "Improved Python (WebDriver)";
 this.testcaseExtension = ".py";
 this.suiteExtension = ".py";
 this.webdriver = true;
@@ -465,6 +466,40 @@ WDAPI.Driver.prototype.refresh = function() {
   return this.ref + ".refresh()";
 };
 
+
+WDAPI.Driver.prototype.getEval = function (script) {
+  return this.ref + '.execute_script("""return (' + script + ').toString();""")';
+};
+
+WDAPI.Driver.prototype.runScript = function (script) {
+  return this.ref + '.execute_script("""' + script + '""")';
+}
+
+WDAPI.Driver.prototype.dragAndDrop = function (locator, cmd) {
+    var coords = cmd.match(/([\+\-]?\d+)/g);
+
+    if (coords.length != 2) {
+        return '';
+    }
+
+    return 'action_chain = ActionChains(' + this.ref + ')\n' +
+        'action_chain.drag_and_drop_by_offset(' + this.findElement(locator.type, locator.string).ref + ', ' + coords[0] + ', ' + coords[1] + ')\n' +
+        'action_chain.perform()\n' +
+        'time.sleep(1)';
+};
+
+WDAPI.Driver.prototype.rollup = function (name, args) {
+    var rules = RollupManager.getInstance().getRollupRule(name).getExpandedCommands(args),
+        steps = [],
+        i;
+
+    for (i = 0; i < rules.length; i++) {
+        steps.push(formatCommand(rules[i]));
+    }
+
+    return steps.join('\n');
+};
+
 WDAPI.Element = function(ref) {
   this.ref = ref;
 };
@@ -537,4 +572,31 @@ WDAPI.Utils.isElementPresent = function(how, what) {
 
 WDAPI.Utils.isAlertPresent = function() {
   return "self.is_alert_present()";
+};
+
+SeleniumWebDriverAdaptor.prototype.getEval = function(x) {
+    var driver = new WDAPI.Driver(),
+        script = this.rawArgs[0];
+    return driver.getEval(script);
+};
+
+SeleniumWebDriverAdaptor.prototype.runScript = function(x) {
+    var driver = new WDAPI.Driver(),
+        script = this.rawArgs[0];
+    return driver.runScript(script);
+};
+
+SeleniumWebDriverAdaptor.prototype.dragAndDrop = function(elementLocator) {
+    var locator = this._elementLocator(this.rawArgs[0]);
+    var driver = new WDAPI.Driver();
+
+    return driver.dragAndDrop(locator, this.rawArgs[1]);
+};
+
+SeleniumWebDriverAdaptor.prototype.rollup = function(name, args) {
+    var rollupName = this.rawArgs[0],
+        rollupArgs = this.rawArgs[1],
+        driver = new WDAPI.Driver();
+
+    return driver.rollup(rollupName, rollupArgs);
 };
