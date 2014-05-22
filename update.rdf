@@ -23,10 +23,10 @@
                 <em:maxVersion>28.*</em:maxVersion>
 
                 <!-- This is where this version of the add-on will be downloaded from -->
-                <em:updateLink>https://testing.courbanize.com.s3.amazonaws.com/selenium-python-formatters/se-py-fmtr-1.1.xpi</em:updateLink>
+                <em:updateLink>http://testing.courbanize.com.s3.amazonaws.com/selenium-python-formatters/se-py-fmtr-1.1.xpi</em:updateLink>
 
                 <!-- A page describing what is new in this updated version -->
-                <em:updateInfoURL>https://testing.courbanize.com.s3.amazonaws.com/selenium-python-formatters/se-py-fmt-1.1.xhtml</em:updateInfoURL>
+                <em:updateInfoURL>http://testing.courbanize.com.s3.amazonaws.com/selenium-python-formatters/se-py-fmt-1.1.xhtml</em:updateInfoURL>
 
                 <!-- generated from "openssl sha1 se-py-fmtr-1.1.xpi" -->
                 <em:updateHash>sha1:c0db797e097f4be6f462364a95b0d7e6a33dadb4</em:updateHash>
@@ -48,10 +48,10 @@
                 <em:maxVersion>28.*</em:maxVersion>
 
                 <!-- This is where this version of the add-on will be downloaded from -->
-                <em:updateLink>https://testing.courbanize.com.s3.amazonaws.com/selenium-python-formatters/se-py-fmtr-1.0.xpi</em:updateLink>
+                <em:updateLink>http://testing.courbanize.com.s3.amazonaws.com/selenium-python-formatters/se-py-fmtr-1.0.xpi</em:updateLink>
 
                 <!-- A page describing what is new in this updated version -->
-                <em:updateInfoURL>https://testing.courbanize.com.s3.amazonaws.com/selenium-python-formatters/se-py-fmt-1.0.xhtml</em:updateInfoURL>
+                <em:updateInfoURL>http://testing.courbanize.com.s3.amazonaws.com/selenium-python-formatters/se-py-fmt-1.0.xhtml</em:updateInfoURL>
 
                 <!-- generated from "openssl sha1 se-py-fmtr-1.0.xpi" -->
                 <em:updateHash>sha1:fe9e6a01ec079c002436181efa71f3ba26823b39</em:updateHash>
