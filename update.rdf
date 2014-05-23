@@ -13,6 +13,31 @@
         <!-- Each li is a different version of the same add-on -->
         <RDF:li>
           <RDF:Description>
+            <em:version>2.4.0</em:version> <!-- This is the version number of the add-on -->
+
+            <!-- One targetApplication for each application the add-on is compatible with -->
+            <em:targetApplication>
+              <RDF:Description>
+                <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id> <!-- firefox -->
+                <em:minVersion>3.0</em:minVersion>
+                <em:maxVersion>28.*</em:maxVersion>
+
+                <!-- This is where this version of the add-on will be downloaded from -->
+                <em:updateLink>http://testing.courbanize.com.s3.amazonaws.com/selenium-python-formatters/se-py-fmtr-2.4.0.xpi</em:updateLink>
+
+                <!-- A page describing what is new in this updated version -->
+                <em:updateInfoURL>http://testing.courbanize.com.s3.amazonaws.com/selenium-python-formatters/se-py-fmtr-2.4.0.xpi.xhtml</em:updateInfoURL>
+
+                <!-- generated from "openssl sha1 se-py-fmtr-2.4.0.xpi" -->
+                <em:updateHash>sha1:062c39992323745935e0335f376cdf45617357f2</em:updateHash>
+              </RDF:Description>
+            </em:targetApplication>
+          </RDF:Description>
+        </RDF:li>
+
+        <!-- Each li is a different version of the same add-on -->
+        <RDF:li>
+          <RDF:Description>
             <em:version>1.1</em:version> <!-- This is the version number of the add-on -->
 
             <!-- One targetApplication for each application the add-on is compatible with -->
@@ -26,7 +51,7 @@
                 <em:updateLink>http://testing.courbanize.com.s3.amazonaws.com/selenium-python-formatters/se-py-fmtr-1.1.xpi</em:updateLink>
 
                 <!-- A page describing what is new in this updated version -->
-                <em:updateInfoURL>http://s3.amazonaws.com/testing.courbanize.com/selenium-python-formatters/se-py-fmtr-1.1.xpi.xhtml</em:updateInfoURL>
+                <em:updateInfoURL>http://testing.courbanize.com.s3.amazonaws.com/selenium-python-formatters/se-py-fmtr-1.1.xpi.xhtml</em:updateInfoURL>
 
                 <!-- generated from "openssl sha1 se-py-fmtr-1.1.xpi" -->
                 <em:updateHash>sha1:c0db797e097f4be6f462364a95b0d7e6a33dadb4</em:updateHash>
@@ -51,7 +76,7 @@
                 <em:updateLink>http://testing.courbanize.com.s3.amazonaws.com/selenium-python-formatters/se-py-fmtr-1.0.xpi</em:updateLink>
 
                 <!-- A page describing what is new in this updated version -->
-                <em:updateInfoURL>http://s3.amazonaws.com/testing.courbanize.com/selenium-python-formatters/se-py-fmtr-1.0.xpi.xhtml</em:updateInfoURL>
+                <em:updateInfoURL>http://testing.courbanize.com.s3.amazonaws.com/selenium-python-formatters/se-py-fmtr-1.0.xpi.xhtml</em:updateInfoURL>
 
                 <!-- generated from "openssl sha1 se-py-fmtr-1.0.xpi" -->
                 <em:updateHash>sha1:fe9e6a01ec079c002436181efa71f3ba26823b39</em:updateHash>
