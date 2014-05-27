@@ -14,11 +14,11 @@ Improved formatters for the Selenium IDE to output more Selenese commands to Pyt
 
 ## Installation ##
 
-Grab the newest version of the IDE from [here](http://testing.courbanize.com.s3.amazonaws.com/selenium-python-formatters/se-py-fmtr-1.1.xpi).
+Grab the newest version of the IDE from [here](http://testing.courbanize.com.s3.amazonaws.com/selenium-python-formatters/se-py-fmtr-2.4.xpi).
 
-Download link: http://testing.courbanize.com.s3.amazonaws.com/selenium-python-formatters/se-py-fmtr-1.1.xpi
+Download link: http://testing.courbanize.com.s3.amazonaws.com/selenium-python-formatters/se-py-fmtr-2.4.xpi
 
-You can also review the changes from the last release in the [Release Notes](http://testing.courbanize.com.s3.amazonaws.com/selenium-python-formatters/se-py-fmtr-1.1.xpi.xhtml)
+You can also review the changes from the last release in the [Release Notes](http://testing.courbanize.com.s3.amazonaws.com/selenium-python-formatters/se-py-fmtr-2.4.xpi.xhtml)
 
 
 Usage
@@ -96,12 +96,12 @@ self.assertEqual("true", driver.execute_script("""return (window.location.href =
 
       **Improved Python Formatter**
       ```python
-for i in range(60):
-    try:
-        if "true" == driver.execute_script("""return (window.location.href == 'http://localhost/').toString();"""): break
-    except: pass
-    time.sleep(1)
-else: self.fail("time out")
+    for i in range(60):
+        try:
+            if "true" == driver.execute_script("""return (window.location.href == 'http://localhost/').toString();"""): break
+        except: pass
+        time.sleep(1)
+    else: self.fail("time out")
       ```
 
 
