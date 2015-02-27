@@ -14,11 +14,11 @@ Improved formatters for the Selenium IDE to output more Selenese commands to Pyt
 
 ## Installation ##
 
-Grab the newest version of the IDE from [here](http://testing.courbanize.com.s3.amazonaws.com/selenium-python-formatters/se-py-fmtr-2.4.xpi).
+Grab the newest version of the IDE from [here](http://testing.courbanize.com.s3.amazonaws.com/selenium-python-formatters/se-py-fmtr-2.44.xpi).
 
-Download link: http://testing.courbanize.com.s3.amazonaws.com/selenium-python-formatters/se-py-fmtr-2.4.xpi
+Download link: http://testing.courbanize.com.s3.amazonaws.com/selenium-python-formatters/se-py-fmtr-2.44.xpi
 
-You can also review the changes from the last release in the [Release Notes](http://testing.courbanize.com.s3.amazonaws.com/selenium-python-formatters/se-py-fmtr-2.4.xpi.xhtml)
+You can also review the changes from the last release in the [Release Notes](http://testing.courbanize.com.s3.amazonaws.com/selenium-python-formatters/se-py-fmtr-2.44.xpi.xhtml)
 
 
 Usage
@@ -223,6 +223,6 @@ For issues with the Improved Selenium Formatters, please open an issue on the gi
 
 ## Author ##
 
-[David Zwarg](dzwarg@courbanize.com) is the Lead Front End Developer at [coUrbanize](http://courbanize.com)
+[David Zwarg](dzwarg@courbanize.com) is the Director of Engineering at [coUrbanize](http://courbanize.com)
 
 [coUrbanize](http://courbanize.com) uses [Selenium](http://docs.seleniumhq.org/) and [Python](https://www.python.org/) extensively, and utilize the features in the improved Python formatters extensively. This plugin is a critical component in translating [Selenium IDE](http://docs.seleniumhq.org/projects/ide/) scripts into unit tests integrated into a [Continuous Integration](https://codeship.io/) and [Continuous Delivery](http://en.wikipedia.org/wiki/Continuous_delivery) framework.
